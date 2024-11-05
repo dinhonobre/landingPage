@@ -8,6 +8,12 @@
 
     .container {
         position: relative;
+        .container {
+            max-width: 1200px; /* Ou outro valor desejado */
+            margin: 0 auto;
+            padding: 0 16px; /* Espaço lateral */
+        }
+        
     }
 
     &::before {
@@ -44,8 +50,9 @@
 
         &__text {
             font-size: 22px;
-            line-height: 24px;
-            margin: 24px 0;
+        line-height: 28px; /* Menor e ajustado ao font-size */
+        margin: 24px 16px; /* Espaço adicional */
+        padding: 0 8px;
         }
     }
 }
