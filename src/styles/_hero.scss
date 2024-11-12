@@ -6,15 +6,20 @@
     background-size: cover;
     position: relative;
 
+    .hero__countdown {
+        display: block;       /* Faz com que o span ocupe uma linha inteira abaixo do texto */
+        margin-top: 8px;      /* Espaço entre o texto e o contador */
+        font-size: 36px;      /* Ajuste do tamanho da fonte, se necessário */
+        font-weight: bold;    /* Opção para dar mais destaque ao contador */
+    }
+    
+
     .container {
         position: relative;
-        .container {
-            max-width: 1200px; /* Ou outro valor desejado */
-            margin: 0 auto;
-            padding: 0 16px; /* Espaço lateral */
+        max-width: 1200px; /* Ou outro valor desejado */
+        margin: 0 auto;
+        padding: 0 16px; /* Espaço lateral */
         }
-        
-    }
 
     &::before {
         position: absolute;
@@ -48,11 +53,11 @@
             height: 40px;
         }
 
-        &__text {
+        .hero__text {
             font-size: 22px;
-        line-height: 28px; /* Menor e ajustado ao font-size */
-        margin: 24px 16px; /* Espaço adicional */
-        padding: 0 8px;
+            line-height: 28px;
+            margin: 16px 8px;
+            padding: 0 8px;
         }
     }
 }

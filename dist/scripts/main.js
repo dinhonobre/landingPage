@@ -584,6 +584,22 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"3cYfC":[function(require,module,exports) {
+AOS.init();
+const diaDoEvento = new Date("dec 12, 2030 20:00:00");
+const timeStampDoEvento = diaDoEvento.getTime();
+const contaAsHoras = setInterval(function() {
+    const agora = new Date();
+    const timeStampAtual = agora.getTime();
+    const tempoAteOEvento = timeStampDoEvento - timeStampAtual;
+    const diaEmMs = 86400000;
+    const horasEmMs = 3600000;
+    const minutoEmMs = 60000;
+    const diasAteOEvento = Math.floor(tempoAteOEvento / diaEmMs);
+    const horasAteOEvento = Math.floor(tempoAteOEvento % diaEmMs / horasEmMs);
+    const minutosAteOEvento = Math.floor(tempoAteOEvento % horasEmMs / minutoEmMs);
+    const segundosAteOEvento = Math.floor(tempoAteOEvento % minutoEmMs / 1000);
+    document.getElementById("contador").innerHTML = `${diasAteOEvento}d ${horasAteOEvento}h ${minutosAteOEvento}m ${segundosAteOEvento}s`;
+}, 1000);
 
 },{}]},["8bDoD","3cYfC"], "3cYfC", "parcelRequire8d52")
 

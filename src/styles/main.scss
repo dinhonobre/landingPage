@@ -1,6 +1,8 @@
-@use'hero';
-@use'componets/infos_bar';
-@use'componets/buttons';
+@use 'hero';
+@use 'components/infos-bar';
+@use 'components/buttons';
+@use 'event';
+
 
 * {
     margin: 0;
@@ -21,6 +23,6 @@
     }
 
     @media (max-width: 1024px) {
-        width: 90px;
+        width: 90%;
     }
 }
